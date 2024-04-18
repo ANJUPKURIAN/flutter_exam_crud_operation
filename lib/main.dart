@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_exam_crud_operation/controller/home_screen_controller.dart';
 import 'package:flutter_exam_crud_operation/view/home_screen/home_screen.dart';
 import 'package:provider/provider.dart';
-
 void main() {
   runApp(const MyApp());
 }

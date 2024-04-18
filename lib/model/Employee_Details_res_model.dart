@@ -1,6 +1,4 @@
-//import 'package:flutter_exam_crud_operation/model/employee_details_res_model.dart';
-
-class EmployeeDetailsResModel {
+class  EmployeeDetailsResModel {
   int? status;
   String? message;
   List<Employee>? employeedetailList;

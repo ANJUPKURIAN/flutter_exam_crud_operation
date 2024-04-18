@@ -13,7 +13,7 @@ class HomeScreenController with ChangeNotifier {
   Future getEmployees() async {
     isLoading = true;
     notifyListeners();
-    Uri url = Uri.parse(baseUrl + "/employeedetail/");
+    Uri url = Uri.parse(baseUrl + "/employees/");
     var response = await http.get(url);
     if (response.statusCode >= 200 && response.statusCode < 300) {
       var decodedData = jsonDecode(response.body);
@@ -58,7 +58,7 @@ class HomeScreenController with ChangeNotifier {
     notifyListeners();
   }
 
- // add an employee 
+ // update an employee 
 
   Future updateEmployee(var id) async {
     isLoading = true;

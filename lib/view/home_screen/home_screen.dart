@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_exam_crud_operation/controller/home_screen_controller.dart';
-import 'package:flutter_exam_crud_operation/core/color_constant.dart';
+//import 'package:flutter_exam_crud_operation/core/color_constant.dart';
 import 'package:provider/provider.dart';
 
 
@@ -15,8 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
    @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((timeStamp) async {
+      //
       await Provider.of<HomeScreenController>(context, listen: false)
           .getEmployees();
+      //
     });
     super.initState();
   }
@@ -34,8 +36,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                     hintText: "Enter",
                     label: Text("Employee Name"),
-                    fillColor: ColorConstants.normalGreen.withOpacity(6),
+                    //
+                    fillColor: Colors.green.withOpacity(6),
                     filled: true,
+                    //
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide.none)),
@@ -45,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 decoration: InputDecoration(
                     label: Text("Role"),
                     hintText: "Enter",
-                    fillColor: ColorConstants.normalGreen.withOpacity(6),
+                    fillColor: Colors.green.withOpacity(6),
                     filled: true,
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -64,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: 5),
                       decoration: BoxDecoration(
-                          color: ColorConstants.normalYellow.withOpacity(6),
+                          color: Colors.amber.withOpacity(6),
                           borderRadius: BorderRadius.circular(12)),
                       alignment: Alignment.center,
                       child: Text(
@@ -81,7 +85,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Container(
                       padding: EdgeInsets.symmetric(vertical: 5),
                       decoration: BoxDecoration(
-                          color:ColorConstants.normalYellow.withOpacity(6),
+                          color:Colors.amber.withOpacity(6),
                           borderRadius: BorderRadius.circular(12)),
                       alignment: Alignment.center,
                       child: Text(
