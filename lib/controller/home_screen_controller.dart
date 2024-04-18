@@ -18,7 +18,7 @@ class HomeScreenController with ChangeNotifier {
     if (response.statusCode >= 200 && response.statusCode < 300) {
       var decodedData = jsonDecode(response.body);
       EmployeeDetailsResModel resModel = EmployeeDetailsResModel.fromJson(decodedData);
-      employeedetailList = resModel.employeesdetailList ?? [];
+      employeedetailList = resModel.employeedetailList ?? [];
     }
     isLoading = false;
     notifyListeners();
